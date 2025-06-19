@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plantcare"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/notesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add a Note"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <!-- Text Area -->
+    <EditText
+        android:id="@+id/noteInput"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="Write your note here..."
+        android:textColor="#000000"
+        android:textColorHint="#666666"
+        android:backgroundTint="#32a852"
+        android:gravity="top"
+        android:padding="16dp"
+        android:layout_below="@id/notesTitle"
+        android:layout_marginTop="24dp" />
+
+    <!-- Add Note Button -->
+    <Button
+        android:id="@+id/addNoteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Note"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#32a852"
+        android:layout_below="@id/noteInput"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Back to Home Button -->
+    <Button
+        android:id="@+id/backToHomeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Home"
+        android:backgroundTint="#555555"
+        android:textColor="#FFFFFF"
+        android:layout_below="@id/addNoteBtn"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

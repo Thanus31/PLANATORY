@@ -17,6 +17,39 @@ public class Home extends AppCompatActivity {
             Intent intent = new Intent(Home.this, PlantCareActivity.class);
             startActivity(intent);
         });
+
+        Button plantSwapBtn = findViewById(R.id.plantSwapBtn);
+
+        plantSwapBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Home.this, AddPlantActivity.class);
+            startActivity(intent);
+        });
+
+        Button notesBtn = findViewById(R.id.notesBtn);
+
+        notesBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Home.this, Note.class);
+            startActivity(intent);
+        });
+
+        Button mapBtn = findViewById(R.id.mapBtn);
+
+        mapBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Home.this, Map.class);
+            startActivity(intent);
+        });
+
+
+        Button profileBtn = findViewById(R.id.profileBtn);
+
+        profileBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Home.this, Profile.class);
+            startActivity(intent);
+        });
+
+
+
+
     }
 }
 

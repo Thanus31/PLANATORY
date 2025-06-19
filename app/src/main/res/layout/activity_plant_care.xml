@@ -35,28 +35,32 @@ android:paddingHorizontal="24dp">
     android:layout_height="wrap_content"
     android:text="Reminder 01"
     android:textSize="18sp"
-    android:textColor="#000000" />
+    android:textColor="#000000"
+    android:buttonTint="#000000"/>
 
 <CheckBox
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Reminder 02"
     android:textSize="18sp"
-    android:textColor="#000000" />
+    android:textColor="#000000"
+    android:buttonTint="#000000"/>
 
 <CheckBox
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Reminder 03"
     android:textSize="18sp"
-    android:textColor="#000000" />
+    android:textColor="#000000"
+    android:buttonTint="#000000"/>
 
 <CheckBox
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Reminder 04"
     android:textSize="18sp"
-    android:textColor="#000000" />
+    android:textColor="#000000"
+    android:buttonTint="#000000"/>
 </LinearLayout>
 
     <!-- Small Add Reminder Button -->

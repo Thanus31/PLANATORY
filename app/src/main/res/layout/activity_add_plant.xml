@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plantcare">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Your Plant"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Upload Image -->
+        <ImageView
+            android:id="@+id/plantImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="12dp"
+            android:background="#CCCCCC"
+            android:scaleType="centerCrop"
+            android:contentDescription="Plant image" />
+
+        <Button
+            android:id="@+id/uploadImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Image"
+            android:backgroundTint="#32a852"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Plant Name -->
+        <EditText
+            android:id="@+id/plantNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Plant Name"
+            android:backgroundTint="#32a852"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/plantLocationInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:backgroundTint="#32a852"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/plantDescriptionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:backgroundTint="#32a852"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="24dp"
+            android:minLines="3"
+            android:gravity="top" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitPlantBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:backgroundTint="#32a852"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Back to Home Button -->
+        <Button
+            android:id="@+id/backToHomeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back to Home"
+            android:backgroundTint="#555555"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
