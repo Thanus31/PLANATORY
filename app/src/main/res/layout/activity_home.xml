@@ -104,7 +104,7 @@
                 android:id="@+id/mapBtn"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:text="Map View(Not Done yet)"
+                android:text="Map View"
                 android:backgroundTint="#006644"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
