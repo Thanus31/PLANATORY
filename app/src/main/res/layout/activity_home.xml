@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +18,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
-    <!-- Horizontal Images -->
+    <!-- Horizontal Image Row -->
     <LinearLayout
         android:id="@+id/imageRow"
         android:layout_width="match_parent"
@@ -51,7 +52,7 @@
             android:src="@drawable/home3" />
     </LinearLayout>
 
-    <!-- Buttons Layout -->
+    <!-- Buttons Section -->
     <LinearLayout
         android:id="@+id/buttonGrid"
         android:layout_width="match_parent"
@@ -61,6 +62,7 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+        <!-- First Row -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -85,6 +87,7 @@
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 
+        <!-- Second Row -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,47 +112,29 @@
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 
-        <Button
-            android:id="@+id/profileBtn"
-            android:layout_width="140dp"
+        <!-- Third Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Profile"
-            android:backgroundTint="#006644"
-            android:textColor="#FFFFFF" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/profileBtn"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:backgroundTint="#006644"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="16dp" />
+
+            <Button
+                android:id="@+id/btnSensor"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text="Check Light"
+                android:backgroundTint="#006644"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
     </LinearLayout>
 
-    <!-- Bottom Navigation Bar -->
-    <LinearLayout
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#A8E6A1"
-        android:gravity="center">
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@android:drawable/ic_menu_view"
-            android:layout_margin="16dp" />
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@android:drawable/btn_star_big_off"
-            android:layout_margin="16dp" />
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@android:drawable/ic_menu_manage"
-            android:layout_margin="16dp" />
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@android:drawable/ic_menu_share"
-            android:layout_margin="16dp" />
-    </LinearLayout>
 </RelativeLayout>

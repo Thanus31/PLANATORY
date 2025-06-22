@@ -4,8 +4,20 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    android:background="@drawable/swap"> <!-- optional background -->
+    android:background="@drawable/swap">
 
+    <!-- Title -->
+    <TextView
+        android:id="@+id/registerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="32dp" />
+
+    <!-- User Name -->
     <EditText
         android:id="@+id/registerUsernameInput"
         android:layout_width="match_parent"
@@ -17,6 +29,7 @@
         android:inputType="textPersonName"
         android:layout_marginBottom="16dp" />
 
+    <!-- Password -->
     <EditText
         android:id="@+id/registerPasswordInput"
         android:layout_width="match_parent"
@@ -28,6 +41,7 @@
         android:inputType="textPassword"
         android:layout_marginBottom="16dp" />
 
+    <!-- Re enter Password -->
     <EditText
         android:id="@+id/reEnterPasswordInput"
         android:layout_width="match_parent"
@@ -39,6 +53,7 @@
         android:inputType="textPassword"
         android:layout_marginBottom="24dp" />
 
+    <!-- Register Button -->
     <Button
         android:id="@+id/registerSubmitBtn"
         android:layout_width="match_parent"

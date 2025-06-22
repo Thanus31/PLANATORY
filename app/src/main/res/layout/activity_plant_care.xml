@@ -63,7 +63,7 @@ android:paddingHorizontal="24dp">
     android:buttonTint="#000000"/>
 </LinearLayout>
 
-    <!-- Small Add Reminder Button -->
+    <!-- Add Reminder Button -->
 <Button
 android:id="@+id/addReminderBtn"
 android:layout_width="wrap_content"

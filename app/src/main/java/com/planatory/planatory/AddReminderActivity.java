@@ -21,7 +21,7 @@ public class AddReminderActivity extends AppCompatActivity {
         addTaskBtn = findViewById(R.id.addTaskBtn);
         backToHomeBtn = findViewById(R.id.backToHomeBtn);
 
-        // ✅ Add Task: send to PlantCareActivity
+        //Add Task - send to PlantCareActivity
         addTaskBtn.setOnClickListener(v -> {
             String newTask = taskInput.getText().toString().trim();
             if (newTask.isEmpty()) {
@@ -34,7 +34,7 @@ public class AddReminderActivity extends AppCompatActivity {
             }
         });
 
-        // ⬅️ Back to Home
+        // Back to Home
         backToHomeBtn.setOnClickListener(v -> {
             Intent intent = new Intent(AddReminderActivity.this, Home.class);
             startActivity(intent);

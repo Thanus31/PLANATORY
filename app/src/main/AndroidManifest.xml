@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.planatory.planatory">
 
-    <!-- ✅ Permissions go here, OUTSIDE the <application> -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -18,30 +17,49 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Planatory"
         tools:targetApi="31">
-
-        <!-- ✅ Google Maps API key -->
+        <activity
+            android:name=".LightSensorActivity"
+            android:exported="false" />
+        <!-- Google Maps API key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/my_api_key" />
-
-        <!-- Activities -->
-        <activity android:name=".Profile" android:exported="false" />
-        <activity android:name=".Map" android:exported="false" />
-        <activity android:name=".Note" android:exported="false" />
-        <activity android:name=".SwapScreenActivity" android:exported="false" />
-        <activity android:name=".AddPlantActivity" android:exported="false" />
-        <activity android:name=".AddReminderActivity" android:exported="false" />
-        <activity android:name=".PlantCareActivity" android:exported="false" />
-        <activity android:name=".Home" android:exported="false" />
-        <activity android:name=".RegisterActivity" android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".Map"
+            android:exported="false" />
+        <activity
+            android:name=".Note"
+            android:exported="false" />
+        <activity
+            android:name=".SwapScreenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddPlantActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddReminderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlantCareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Home"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
+
 </manifest>

@@ -18,18 +18,18 @@ public class Note extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
-        // 2. Initialize database helper
+        // Initialize database helper
         dbHelper = new DatabaseHelper(this);
 
         EditText noteInput = findViewById(R.id.noteInput);
         Button addNoteBtn = findViewById(R.id.addNoteBtn);
 
-        // 3. Set listener to save note to SQLite
+        // Set listener to save note to SQLite
         addNoteBtn.setOnClickListener(v -> {
             String noteText = noteInput.getText().toString().trim();
 
             if (!noteText.isEmpty()) {
-                // 4. Insert to database
+                // Insert to database
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 values.put(DatabaseHelper.COL_NOTE_TEXT, noteText);

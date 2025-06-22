@@ -15,9 +15,9 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register); // your layout file
+        setContentView(R.layout.activity_register);
 
-        // Reference inputs
+
         usernameInput = findViewById(R.id.registerUsernameInput);
         passwordInput = findViewById(R.id.registerPasswordInput);
         reEnterPasswordInput = findViewById(R.id.reEnterPasswordInput);
@@ -33,10 +33,10 @@ public class RegisterActivity extends AppCompatActivity {
             } else if (!password.equals(rePassword)) {
                 Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             } else {
-                // Registration logic complete
+
                 Intent intent = new Intent(RegisterActivity.this, Home.class);
                 startActivity(intent);
-                finish(); // optional: prevent back to register screen
+                finish();
             }
         });
     }
