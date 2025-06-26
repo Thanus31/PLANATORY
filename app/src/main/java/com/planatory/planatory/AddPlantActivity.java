@@ -52,7 +52,7 @@ public class AddPlantActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Plant submitted!", Toast.LENGTH_SHORT).show();
 
-                // 🔁 Go to Swap Screen instead of Home
+
                 Intent intent = new Intent(AddPlantActivity.this, SwapScreenActivity.class);
                 startActivity(intent);
                 finish();

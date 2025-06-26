@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Your login screen layout
+        setContentView(R.layout.activity_main); // login screen layout
 
         // Input fields
         usernameInput = findViewById(R.id.usernameInput);

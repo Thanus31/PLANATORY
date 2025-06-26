@@ -6,8 +6,14 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.view.View;
+
+
+
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+
 
 public class Note extends AppCompatActivity {
 
@@ -27,6 +33,20 @@ public class Note extends AppCompatActivity {
         // Set listener to save note to SQLite
         addNoteBtn.setOnClickListener(v -> {
             String noteText = noteInput.getText().toString().trim();
+
+            Button backHomeBtn = findViewById(R.id.backToHomeBtn);
+
+            backHomeBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Note.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+
+
 
             if (!noteText.isEmpty()) {
                 // Insert to database
