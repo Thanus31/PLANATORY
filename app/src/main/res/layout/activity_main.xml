@@ -19,6 +19,16 @@
         android:layout_marginBottom="40dp"
         android:fontFamily="sans-serif-bold" />
 
+    <ImageView
+        android:id="@+id/homeImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/homeimg" />
+
     <!-- Username input -->
     <EditText
         android:id="@+id/usernameInput"

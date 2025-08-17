@@ -55,4 +55,13 @@
         android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true" />
 
+    <!-- RecyclerView for Notes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backToHomeBtn"
+        android:layout_marginTop="24dp"
+        android:scrollbars="vertical"/>
+
 </RelativeLayout>
