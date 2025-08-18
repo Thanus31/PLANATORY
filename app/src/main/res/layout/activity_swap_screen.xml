@@ -20,6 +20,35 @@
             android:layout_gravity="center"
             android:layout_marginBottom="16dp" />
 
+        <TextView
+            android:id="@+id/newPlantMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mobile: Not provided"
+            android:textColor="#000000"
+            android:paddingBottom="16dp"
+            android:textStyle="bold" />
+
+
+        <!-- New Plant Section -->
+        <ImageView
+            android:id="@+id/newPlantImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="4dp"
+            android:background="#CCCCCC" />
+
+        <TextView
+            android:id="@+id/newPlantDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No plant added yet"
+            android:textColor="#000000"
+            android:paddingBottom="16dp"
+            android:textStyle="bold" />
+
+
         <!-- Plant 1 -->
         <ImageView
             android:layout_width="match_parent"

@@ -1,4 +1,4 @@
-package com.planatory.planatory; // Use your actual package name
+package com.planatory.planatory;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ public class Home extends AppCompatActivity {
         //Plant Care Button
         Button plantCareBtn = findViewById(R.id.plantCareBtn);
         plantCareBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(Home.this, PlantCareActivity.class);
+            Intent intent = new Intent(Home.this, AddReminderActivity.class);
             startActivity(intent);
         });
 

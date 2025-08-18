@@ -22,21 +22,12 @@
         android:layout_alignParentTop="true">
 
         <EditText
-            android:id="@+id/fromLocation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="From"
-            android:padding="10dp" />
-
-        <EditText
             android:id="@+id/toLocation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="To"
-            android:padding="10dp"
-            android:layout_marginStart="8dp" />
+            android:layout_weight="2"
+            android:hint="Enter destination"
+            android:padding="10dp" />
 
         <Button
             android:id="@+id/directionBtn"
@@ -47,12 +38,12 @@
 
         <Button
             android:id="@+id/backToHomeBtn"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Home"
             android:backgroundTint="#555555"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="8dp" />
 
     </LinearLayout>
 </RelativeLayout>

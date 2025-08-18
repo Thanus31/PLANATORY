@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class PlantCareActivity extends AppCompatActivity {
 
     private Button addReminderBtn;
-    private Button backToHomeBtn; // ← NEW
+    private Button backToHomeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +23,10 @@ public class PlantCareActivity extends AppCompatActivity {
         );
 
         // Back to Home
-        backToHomeBtn = findViewById(R.id.backToHomeBtn); // same ID as in XML
+        backToHomeBtn = findViewById(R.id.backToHomeBtn);
         backToHomeBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, Home.class)); // Home = your main screen
-            finish(); // optional – closes this screen
+            startActivity(new Intent(this, Home.class));
+            finish();
         });
     }
 }

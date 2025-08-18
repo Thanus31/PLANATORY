@@ -1,6 +1,8 @@
 package com.planatory.planatory;
 
-import android.content.Intent;                       // ← NEW
+import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,51 +12,64 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.*;
-import com.google.android.gms.maps.model.*;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.util.List;
+import java.util.Locale;
 
 public class Map extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private EditText fromLocation, toLocation;
-    private Button directionBtn;
-    private Button backToHomeBtn;
+    private EditText destinationInput;
+    private Button searchBtn, backToHomeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
+        destinationInput = findViewById(R.id.toLocation);
+        searchBtn = findViewById(R.id.directionBtn);
+        backToHomeBtn = findViewById(R.id.backToHomeBtn);
 
-        fromLocation   = findViewById(R.id.fromLocation);
-        toLocation     = findViewById(R.id.toLocation);
-        directionBtn   = findViewById(R.id.directionBtn);
-        backToHomeBtn  = findViewById(R.id.backToHomeBtn);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
 
-
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager()
-                        .findFragmentById(R.id.map);
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }
 
+        searchBtn.setOnClickListener(v -> {
+            String destination = destinationInput.getText().toString().trim();
 
-        directionBtn.setOnClickListener(v -> {
-            String from = fromLocation.getText().toString().trim();
-            String to   = toLocation.getText().toString().trim();
-            if (!from.isEmpty() && !to.isEmpty()) {
-                Toast.makeText(this,
-                        "Showing directions from " + from + " to " + to,
-                        Toast.LENGTH_SHORT).show();
-                // TODO: call Directions API and draw polyline
+            if (!destination.isEmpty()) {
+                Geocoder geocoder = new Geocoder(Map.this, Locale.getDefault());
+                try {
+                    List<Address> addresses = geocoder.getFromLocationName(destination, 1);
+                    if (addresses != null && !addresses.isEmpty()) {
+                        Address address = addresses.get(0);
+                        LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+
+                        mMap.clear();
+                        mMap.addMarker(new MarkerOptions().position(latLng).title(destination));
+                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
+
+                        Toast.makeText(this, "Showing: " + destination, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(this, "Location not found", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(this, "Error finding location", Toast.LENGTH_SHORT).show();
+                }
             } else {
-                Toast.makeText(this, "Enter both locations", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Enter destination", Toast.LENGTH_SHORT).show();
             }
         });
 
-
         backToHomeBtn.setOnClickListener(v -> {
-            startActivity(new Intent(this, Home.class));  // Home = your main screen
+            startActivity(new Intent(this, Home.class));
             finish();
         });
     }
@@ -62,6 +77,7 @@ public class Map extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
+
         // Default view: Sri Lanka
         LatLng sriLanka = new LatLng(7.8731, 80.7718);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sriLanka, 6));

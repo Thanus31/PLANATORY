@@ -11,12 +11,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "PlanatoryDatabase.db";
     public static final int DATABASE_VERSION = 1;
 
-    // Table: Notes
+    // Table - Notes
     public static final String NOTES_TABLE = "Notes";
     public static final String NOTE_ID = "note_id";
     public static final String NOTE_TEXT = "note_text";
 
-    // Table: Plant Tasks
+    // Table - Plant Tasks
     public static final String TASKS_TABLE = "PlantTasks";
     public static final String TASK_ID = "task_id";
     public static final String TASK_NAME = "task_name";

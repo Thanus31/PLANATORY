@@ -32,7 +32,7 @@ public class Note extends AppCompatActivity {
         Button addNoteBtn = findViewById(R.id.addNoteBtn);
         Button backHomeBtn = findViewById(R.id.backToHomeBtn);
 
-        // Setup RecyclerView
+
         notesRecyclerView = findViewById(R.id.notesRecyclerView);
         notesRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         noteAdapter = new NoteAdapter(noteList);
@@ -47,9 +47,9 @@ public class Note extends AppCompatActivity {
             if (!noteText.isEmpty()) {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
-                values.put(DatabaseHelper.NOTE_TEXT, noteText); // updated constant
+                values.put(DatabaseHelper.NOTE_TEXT, noteText);
 
-                long result = db.insert(DatabaseHelper.NOTES_TABLE, null, values); // updated constant
+                long result = db.insert(DatabaseHelper.NOTES_TABLE, null, values);
 
                 if (result != -1) {
                     Toast.makeText(this, "Note saved!", Toast.LENGTH_SHORT).show();
@@ -78,7 +78,7 @@ public class Note extends AppCompatActivity {
         Cursor cursor = dbHelper.getAllNotes();
         if (cursor.moveToFirst()) {
             do {
-                String note = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.NOTE_TEXT)); // updated constant
+                String note = cursor.getString(cursor.getColumnIndexOrThrow(DatabaseHelper.NOTE_TEXT));
                 noteList.add(note);
             } while (cursor.moveToNext());
         }
